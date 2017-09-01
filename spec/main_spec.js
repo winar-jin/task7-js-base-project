@@ -1,9 +1,8 @@
 "use strict";
-var _ = require("lodash");
-var chai = require("chai");
-var sinon = require("sinon");
-var sinonChai = require("sinon-chai");
-var expect = chai.expect;
+const chai = require("chai");
+const sinon = require("sinon");
+const sinonChai = require("sinon-chai");
+const expect = chai.expect;
 chai.use(sinonChai);
 
 const main = require('../lib/main');
@@ -12,7 +11,6 @@ const main = require('../lib/main');
 describe("根据输入的次数打印出歌词：", function () {
   sinon.spy(console, 'log');
   it("输入99次的歌词", function () {
-
     const result = main();
     const expect_string = `99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
