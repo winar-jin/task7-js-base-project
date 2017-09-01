@@ -10,12 +10,12 @@ var printLyrics = require("../lib/main.js");
 
 
 describe("根据输入的次数打印出歌词：", function () {
-    sinon.spy(console, 'log');
+  sinon.spy(console, 'log');
 
-    it("输入99次的歌词", function () {
+  it("输入99次的歌词", function () {
 
-        var result = printLyrics(99);
-        var expect_string = `99 bottles of beer on the wall, 99 bottles of beer.
+    var result = printLyrics(99);
+    var expect_string = `99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 98 bottles of beer on the wall, 98 bottles of beer.
 Take one down and pass it around, 97 bottles of beer on the wall.
@@ -215,13 +215,13 @@ Take one down and pass it around, 1 bottle of beer on the wall.
 Take one down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.`;
-        expect(expect_string).to.equal(result);
-    });
+    expect(expect_string).to.equal(result);
+  });
 
-    it("输入10次的歌词", function () {
+  it("输入10次的歌词", function () {
 
-        var result = printLyrics(10);
-        var expect_string = `10 bottles of beer on the wall, 10 bottles of beer.
+    var result = printLyrics(10);
+    var expect_string = `10 bottles of beer on the wall, 10 bottles of beer.
 Take one down and pass it around, 9 bottles of beer on the wall.
 9 bottles of beer on the wall, 9 bottles of beer.
 Take one down and pass it around, 8 bottles of beer on the wall.
@@ -243,12 +243,12 @@ Take one down and pass it around, 1 bottle of beer on the wall.
 Take one down and pass it around, no more bottles of beer on the wall.
 No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.`;
-        expect(expect_string).to.equal(result);
-    });
+    expect(expect_string).to.equal(result);
+  });
 
-    it("输入0次的歌词", function () {
-        var result = printLyrics(0);
-        var expect_string = `No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.`;
-        expect(expect_string).to.equal(result);
-    });
+  it("输入0次的歌词", function () {
+    var result = printLyrics(0);
+    var expect_string = `No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.`;
+    expect(expect_string).to.equal(result);
+  });
 });
